@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #151719;
+    color: white;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #0d0e10;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+header h2 {
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav a:hover {
+    color: #e63946;
+}
+
+/* Apresentação */
+.inicio {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 8%;
+    gap: 30px;
+    background-color: #101214;
+}
+
+.apresentacao {
+    max-width: 500px;
+}
+
+.linha {
+    width: 70px;
+    height: 4px;
+    background-color: #e63946;
+    margin-bottom: 20px;
+}
+
+.inicio h1 {
+    font-size: 55px;
+    margin-bottom: 12px;
+}
+
+.inicio h3 {
+    color: #c9d0da;
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.inicio p {
+    color: #c9d0da;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.inicio img {
+    width: 42%;
+    max-width: 430px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Informações */
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 45px 8%;
+    background-color: #1b1e22;
+}
+
+.informacoes div {
+    flex: 1;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.informacoes p,
+.informacoes li,
+.curiosidade p {
+    color: #d1d5dc;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+ul {
+    list-style: none;
+}
+
+li::before {
+    content: "✓";
+    color: #ff5a61;
+    margin-right: 12px;
+    font-weight: bold;
+}
+
+/* Galeria e curiosidade */
+.galeria-curiosidade {
+    display: flex;
+    gap: 40px;
+    padding: 40px 8%;
+    background-color: #22262b;
+}
+
+#galeria {
+    flex: 1.2;
+}
+
+.curiosidade {
+    flex: 1;
+    border-left: 1px solid #45494f;
+    padding-left: 35px;
+}
+
+.fotos {
+    display: flex;
+    gap: 12px;
+}
+
+.fotos img {
+    width: 33.33%;
+    height: 135px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid #555;
+}
+
+/* Rodapé */
+footer {
+    background-color: #0d0e10;
+    text-align: center;
+    padding: 25px;
+    color: #bfc4cc;
+    font-size: 14px;
+}
+
+/* Celulares */
+@media (max-width: 700px) {
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .inicio,
+    .informacoes,
+    .galeria-curiosidade {
+        flex-direction: column;
+    }
+
+    .inicio h1 {
+        font-size: 40px;
+    }
+
+    .inicio img {
+        width: 100%;
+    }
+
+    .fotos img {
+        height: 100px;
+    }
+
+    .curiosidade {
+        border-left: none;
+        padding-left: 0;
+    }
+}
